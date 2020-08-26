@@ -11,8 +11,8 @@ public class 행렬_백준1080 {
 		Scanner sc = new Scanner(System.in);
 		N = sc.nextInt();
 		M = sc.nextInt();
-		arrA = new int[N][M];
-		arrB = new int[N][M];
+		arrA = new int[N][M]; //A배열
+		arrB = new int[N][M]; //B배열
 		cnt = 0;
 		for (int i = 0; i < N; i++) {
 			String str = sc.next();
@@ -43,12 +43,13 @@ public class 행렬_백준1080 {
 	}
 
 	private static boolean change(int r, int c) {
-		if(r+3>N || c+3>M) {
+//		3*3행렬 원소 뒤집기
+		if(r+3>N || c+3>M) { //행렬 벗어나지 않아야 하니까!!
 			return false;
 		}
-		for (int i = r; i < r+3; i++) {
+		for (int i = r; i < r+3; i++) { //3*3
 			for (int j = c; j < c+3; j++) {
-				if(arrA[i][j] == 0) {
+				if(arrA[i][j] == 0) { //반대로 뒤집기
 					arrA[i][j] = 1;
 				}else {
 					arrA[i][j] = 0;
