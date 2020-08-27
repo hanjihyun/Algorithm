@@ -2,7 +2,7 @@ package algorithm_WS;
 
 import java.util.Scanner;
 
-public class 빵집_백준3109 {
+public class 빵집_백준3109NOT {
 	static int R, C, Ans;
 	static char[][] gas;
 	static boolean[][] v;

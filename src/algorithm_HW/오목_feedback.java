@@ -1,4 +1,4 @@
-package algorithm_WS;
+package algorithm_HW;
 
 import java.util.Scanner;
 

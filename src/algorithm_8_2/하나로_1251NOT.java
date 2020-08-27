@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class 하나로_1251 {
+public class 하나로_1251NOT {
 	static int N, total;
 	static int[] x;
 	static int[] y;
