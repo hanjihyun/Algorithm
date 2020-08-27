@@ -26,7 +26,7 @@ public class 하나로_1251 {
 
 		@Override
 		public int compareTo(Edge o) {
-			return Double.compare(this.p, o.p);
+			return Double.compare(this.p, o.p); 
 		}
 
 	}
