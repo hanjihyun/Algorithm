@@ -41,7 +41,7 @@ public class 오나의여신님_SWEA7793 {
 		for (int test_case = 1; test_case <= T; test_case++) {
 			N = sc.nextInt();
 			M = sc.nextInt();
-
+			Q = new LinkedList<>();
 			arr = new char[N][M];
 			cnt = new int[N][M];
 
@@ -49,16 +49,17 @@ public class 오나의여신님_SWEA7793 {
 				String str = sc.next();
 				for (int j = 0; j < M; j++) {
 					arr[i][j] = str.charAt(j);
-					if (arr[i][j] == 'S') {
-						Q.add(new Point(i, j, 'S'));
+					if (arr[i][j] == '*') {
+						Q.add(new Point(i, j, '*'));
 					}
 				}
 			}
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < M; j++) {
-					if (arr[i][j] == '*') {
-						Q.add(new Point(i, j, '*'));
+					if (arr[i][j] == 'S') {
+						Q.add(new Point(i, j, 'S'));
 					}
+					
 				}
 			}
 			bfs();
