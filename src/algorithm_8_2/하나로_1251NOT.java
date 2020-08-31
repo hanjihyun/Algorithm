@@ -104,6 +104,8 @@ public class 하나로_1251NOT {
 		if (px < py) {
 			parents[px] = py;
 
+		}else {
+			parents[py] = px;
 		}
 
 	}
