@@ -5,10 +5,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class 하나로_1251NOT {
+public class 하나로_Kruskal_SWEA1251 {
 	static int N, total;
-	static int[] x;
-	static int[] y;
+	static int[] x,y;
 	static double E;
 	static int[] parents;
 	static List<Edge> list;
@@ -35,15 +34,14 @@ public class 하나로_1251NOT {
 		Scanner sc = new Scanner(System.in);
 		int T;
 		T = sc.nextInt();
-		/*
-		 * 여러 개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
-		 */
-		x = new int[N];
-		y = new int[N];
-		E = 0.0;
 
 		for (int test_case = 1; test_case <= T; test_case++) {
 			N = sc.nextInt();
+			x = new int[N];
+			y = new int[N];
+			E = 0.0;
+			
+		
 			for (int i = 0; i < N; i++) {
 				x[i] = sc.nextInt();
 			}
