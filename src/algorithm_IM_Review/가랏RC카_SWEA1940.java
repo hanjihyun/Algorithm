@@ -1,7 +1,9 @@
 package algorithm_IM_Review;
 
 import java.util.Scanner;
-
+//명령어에 따라 가속/ 감속(속도 조절)
+//그 속도로 거리 이동
+//감속시 그 값이 현재 속도보다 더 크면속도는 0으로 초기화
 public class 가랏RC카_SWEA1940 {
 	static int N, total, sp;
 	static int[] speed;
@@ -38,7 +40,6 @@ public class 가랏RC카_SWEA1940 {
 					}
 					total += sp;
 				} else {
-
 					sp = sp;
 					total += sp;
 				}
