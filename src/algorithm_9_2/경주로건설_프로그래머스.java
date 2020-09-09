@@ -19,7 +19,6 @@ public class 경주로건설_프로그래머스 {
 			this.c = c;
 		}
 
-		
 	}
 	private static int solution(int[][] board) {
 		int answer = Integer.MAX_VALUE;
@@ -40,7 +39,7 @@ public class 경주로건설_프로그래머스 {
 			Point p = q.poll();
 			if(p.x == N-1 && p.y == N-1) {
 				answer = Math.min(answer, p.c);
-				 // break가 아닌 continue를 하는 이유: 이 bfs는 길의 길이가 긴 길이 더 비용이 짧을 수 있기 때문
+				//이 bfs는 길의 길이가 긴 길이 더 비용이 짧을 수 있기 때문에 continue
 				continue;
 			}
 			for (int i = 0; i < 4; i++) {
