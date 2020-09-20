@@ -1,5 +1,4 @@
-package com.algo;
-
+package algorithm_9_3;
 import java.util.Scanner;
 
 public class 기타레슨_백준_2343 {
