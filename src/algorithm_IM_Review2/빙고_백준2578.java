@@ -1,4 +1,4 @@
-package algorithm_IM_Review;
+package algorithm_IM_Review2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
