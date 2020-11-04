@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class 키순서_백준5643 {
+public class 키순서_백준2458 {
 	static int N,M,Ans,sh,tall;
 	static ArrayList<Integer>[] list;
 	static ArrayList<Integer>[] list_reverse;
@@ -12,11 +12,11 @@ public class 키순서_백준5643 {
 	public static void main(String args[]) throws Exception
 	{
 		Scanner sc = new Scanner(System.in);
-		int T;
-		T=sc.nextInt();
-
-		for(int test_case = 1; test_case <= T; test_case++)
-		{
+//		int T;
+//		T=sc.nextInt();
+//
+//		for(int test_case = 1; test_case <= T; test_case++)
+//		{
 			N=sc.nextInt();
 			M=sc.nextInt();
 			Ans = 0;
@@ -44,9 +44,9 @@ public class 키순서_백준5643 {
 					Ans++;
 				}
 			}
-			
-			System.out.println("#"+test_case+" "+Ans);
-		}
+			System.out.println(Ans);
+//			System.out.println("#"+test_case+" "+Ans);
+//		}
 	}
 	private static void dfs_re(int start) {
 		v[start] = true;
