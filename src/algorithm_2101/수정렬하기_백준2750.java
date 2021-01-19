@@ -1,4 +1,4 @@
-package algorithm_2101_03;
+package algorithm_2101;
 
 import java.util.Arrays;
 import java.util.Scanner;
