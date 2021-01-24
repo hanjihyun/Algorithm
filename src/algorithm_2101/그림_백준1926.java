@@ -8,6 +8,7 @@ public class 그림_백준1926 {
 	static int[] dr = {-1,1,0,0};
 	static int[] dc = {0,0,-1,1};
 	static boolean[][] v; 
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
@@ -39,7 +40,6 @@ public class 그림_백준1926 {
 		System.out.println(max);
 	}
 	private static void dfs(int x, int y) {
-		
 		v[x][y] = true;
 		for (int d = 0; d < 4; d++) {
 			int nr = x + dr[d];
@@ -52,8 +52,6 @@ public class 그림_백준1926 {
 				cnt++;
 				dfs(nr,nc);
 			}
-
 		}
-		
 	}
 }
