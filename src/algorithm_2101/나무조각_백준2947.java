@@ -22,42 +22,26 @@ public class 나무조각_백준2947 {
 		for (int i = 0; i < 5; i++) {
 			int num =  Integer.parseInt(st.nextToken());
 			tree[i] = num;
-			sort[i] = num;
 		}
-		Arrays.sort(sort);
+
 
 		
-		while(true) {
-			int tmp=0;
-			for (int i = 0; i < 4; i++) {
-				if(tree[i] > tree[i+1]) {
-					tmp = tree[i];
-					tree[i] = tree[i+1];
-					tree[i+1] = tmp;
-					print();
-					if(compare()) {
-						break;
-					}
+		for (int i = 4; i >= 0; i--) {
+			
+			for (int j = 0; j < i; j++) {
+				int tmp=0;
+				if(tree[j] > tree[j+1]) {
+					tmp = tree[j];
+					tree[j] = tree[j+1];
+					tree[j+1] = tmp;
+					System.out.print(tree[0] + " " + tree[1] + " " + tree[2] + " " + tree[3] + " " + tree[4]);
+					System.out.println();
 				}
+				
 			}
-			
+		
 			
 		}
 	}
 
-	private static boolean compare() {
-		for (int i = 0; i < 5; i++) {
-			if(tree[i] != sort[i]) {
-				return false;
-			}
-		}
-		return true;
-	}
-
-	private static void print() {
-		for (int i = 0; i < 5; i++) {
-			System.out.print(tree[i]+" ");
-		}
-		System.out.println();
-	}
 }
