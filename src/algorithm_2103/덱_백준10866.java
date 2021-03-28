@@ -1,3 +1,5 @@
+package algorithm_2103;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;

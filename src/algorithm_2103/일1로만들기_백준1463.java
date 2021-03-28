@@ -1,6 +1,8 @@
+package algorithm_2103;
+
 import java.util.Scanner;
 
-public class 1로만들기_백준1463 {
+public class 일1로만들기_백준1463 {
 	static int N;
 	static int[] d;
 
@@ -24,4 +26,3 @@ public class 1로만들기_백준1463 {
 	}
 
 }
-

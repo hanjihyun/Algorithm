@@ -1,3 +1,4 @@
+package algorithm_2103;
 import java.util.Scanner;
 
 public class 동전0_백준11047 {
