@@ -2,12 +2,14 @@ package algorithm_2103;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class 그대그머가되어_백준14496 {
 	static int a, b, N, M, Ans;
-	static List<Point> list;
-
+	static List<Integer> list[] = new ArrayList[1001];
+	static int[] dist;
 	static class Point {
 		int x, y;
 
@@ -25,53 +27,44 @@ public class 그대그머가되어_백준14496 {
 		b = sc.nextInt();
 		N = sc.nextInt();
 		M = sc.nextInt();
-		list = new ArrayList<>();
-		int aCnt = 0;
-		Ans = 0;
+		
+		dist = new int[1001];
+		for (int i = 1; i <= N; i++) {
+			list[i] = new ArrayList<Integer>();
+			dist[i] = Integer.MAX_VALUE;
+		}
 		for (int i = 0; i < M; i++) {
 			int ix = sc.nextInt();
 			int iy = sc.nextInt();
 
-			list.add(new Point(ix, iy));
-		}
-		int cnt = 0;
-		int min = Integer.MAX_VALUE;
-
-		for (int i = 0; i < M; i++) {
-			if (list.get(i).x == a) {
-				aCnt++;
-				check(i, a);
-			}
+			list[ix].add(iy);
+			list[iy].add(ix);
 		}
 
-		System.out.println(Ans);
+		bfs(a);
+
+		System.out.println(dist[a] == Integer.MAX_VALUE ? -1 : dist[b]);
 	}
 
-	private static void check(int i,int ia) {
-		for (int j = i; j < M; j++) {
+	private static void bfs(int ia) {
+		Queue<Point> q = new PriorityQueue<>((a,b)->a.y - b.y);
+		dist[ia] = 0;
+		q.add(new Point(ia, 0));
+		
+		while(!q.isEmpty()) {
+		
+			Point p = q.poll();
+			int cur = p.x;
+			int d = p.y;
 			
-			Point p = list.get(j);
-			if(p.x == ia) {
-			ia = p.y;
-//			if (.y == b) {
-//				
-//			}
+			if(dist[cur] < d) continue;
+			for (int i:list[cur]) {
+				if(dist[i]>d+1){
+					dist[i] = d+1;
+					q.add(new Point(i, d+1));
+				}
 			}
 		}
 	}
 
 }
-//while (aCnt <= 0) {
-//	for (int i = 0; i < M; i++) {
-//		if (list.get(i).x == a) {
-//			cnt++;
-//			a = list.get(i).y;
-//			if (list.get(i).y == b) {
-//				if(cnt<=min) {
-//					min = cnt;
-//					
-//				}
-//			}
-//		}
-//	}
-//}
