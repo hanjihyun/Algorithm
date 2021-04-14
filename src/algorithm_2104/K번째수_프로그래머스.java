@@ -11,7 +11,6 @@ public class K번째수_프로그래머스 {
 		int[][] commands = { { 2, 5, 3 }, { 4, 4, 1 }, { 1, 7, 3 } };
 		int[] ar = solution(array, commands);
 
-		System.out.println();
 	}
 
 	public static int[] solution(int[] array, int[][] commands) {
@@ -25,10 +24,7 @@ public class K번째수_프로그래머스 {
 				list.add(array[k]);
 			}
 			Collections.sort(list);
-//			for (int j = 0; j < list.size(); j++) {
-//
-//				System.out.println(list.toString());
-//			}
+
 			answer[i] = (int) list.get(commands[i][2]-1);
 		
 		}
