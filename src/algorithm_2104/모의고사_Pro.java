@@ -41,7 +41,7 @@ public class 모의고사_Pro {
             temp.clear();
             temp.add(3);
             max = cnt3;
-        } else if (max == cnt2) {
+        } else if (max == cnt3) {
             temp.add(3);
         }
         answer = new int[temp.size()];
