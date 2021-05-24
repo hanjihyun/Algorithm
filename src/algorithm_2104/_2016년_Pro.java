@@ -1,5 +1,5 @@
 package algorithm_2104;
-class 2016년_Pro {
+class _2016년_Pro {
         public String solution(int a, int b) {
             String answer = "";
             int[] months = {31,29,31,30,31,30,31,31,30,31,30,31};
