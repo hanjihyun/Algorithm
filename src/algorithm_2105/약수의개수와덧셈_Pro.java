@@ -1,25 +1,25 @@
 package algorithm_2105;
 
-public class 약수의개수와덧셈 {
+public class 약수의개수와덧셈_Pro {
 	public static void main(String[] args) {
-		int left =13;
-		int right=17;
+		int left = 13;
+		int right = 17;
 		int answer = 0;
-        
+
 		for (int i = left; i <= right; i++) {
 			int cnt = 0;
-			
+
 			for (int j = 1; j <= i; j++) {
-				if(i % j == 0) {
+				if (i % j == 0) {
 					cnt++;
 				}
 			}
-System.out.println(cnt);
-if(cnt % 2 == 0) {
-	answer += i;
-}else {
-	answer -= i;
-}
+			//System.out.println(cnt);
+			if (cnt % 2 == 0) {
+				answer += i;
+			} else {
+				answer -= i;
+			}
 		}
 		System.out.println(answer);
 	}
