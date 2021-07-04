@@ -6,7 +6,7 @@ import java.util.List;
 
 public class 가장큰수_Pro {
 	public static void main(String[] args) {
-		int[] numbers = { 6, 10, 2 };
+		int[] numbers = { 0, 0, 0, 0, 0 };
 
 		String answer = "";
 		List<Integer> list = new ArrayList<Integer>();
@@ -19,9 +19,14 @@ public class 가장큰수_Pro {
 			return s1s2 > s2s1 ? 1 : s1s2.equals(s2s1) ? 0 : -1;
 		};
 		list.sort(comparator.reversed());
+		int cnt = 0;
 		for (Integer s : list) {
 			answer += String.valueOf(s);
+			if(s == 0) {
+				cnt++;
+			}
 		}
+		if(cnt==list.size()) {answer="0";}
 		System.out.println(answer);
 	}
 }
