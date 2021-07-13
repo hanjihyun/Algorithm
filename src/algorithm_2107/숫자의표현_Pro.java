@@ -13,6 +13,8 @@ public class 숫자의표현_Pro {
 				if(sum == n) {
 					answer++;
 					break;
+				}else if(sum > n) {
+					break;
 				}
 			}
 		}
