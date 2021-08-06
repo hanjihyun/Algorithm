@@ -4,27 +4,28 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class 치킨치킨치킨_백준16439 {
-	static int N, M;
-	static int[] sel = new int[3],arr;
+	static int N, M, sum;
+	static int[] sel = new int[3], arr, maxT;
 	static int[][] board;
 	static int max = Integer.MIN_VALUE;
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
 		N = sc.nextInt();
 		M = sc.nextInt();
 
-		board = new int[N+1][M+1];
+		board = new int[N][M];
 
-		for (int i = 1; i <= N; i++) {
-			for (int j = 1; j <= M; j++) {
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < M; j++) {
 				board[i][j] = sc.nextInt();
 			}
 		}
-
+		maxT = new int[N];
 		arr = new int[M];
 		for (int i = 0; i < M; i++) {
-			arr[i] = i+1;
+			arr[i] = i + 1;
 		}
 		combination(0, 0);
 		System.out.println(max);
@@ -32,29 +33,33 @@ public class 치킨치킨치킨_백준16439 {
 
 	private static void combination(int idx, int k) {
 		if (k == sel.length) {
-			System.out.println(Arrays.toString(sel));
-		
-			int sum = 0;
-			for (int i = 0; i < 3; i++) {
-				
-				for (int j = 1; j <= N; j++) {
-					sum += board[j][sel[i]];
+//			System.out.println(Arrays.toString(sel));
+
+			int maxSum = 0;
+			for (int j = 0; j < N; j++) {
+
+				sum = 0;
+				for (int i = 0; i < 3; i++) {
+					if (sum < board[j][sel[i]]) {
+						sum = board[j][sel[i]];
+					}
 				}
-				
+				maxT[j] = sum;
 			}
-			System.out.println(sum);
-			if(sum > max) {
-				max = sum;
+			for (int i = 0; i < N; i++) {
+				maxSum += maxT[i];
 			}
-			
-			return;
-		}
-		if (idx == arr.length) {
+//			System.out.println(maxSum);
+			if (maxSum > max) {
+				max = maxSum;
+			}
 
 			return;
 		}
-		sel[k] = arr[idx];
-		combination(idx + 1, k + 1);
-		combination(idx + 1, k);
+
+		for (int i = idx; i < M; i++) {
+			sel[k] = i;
+			combination(idx + 1, k + 1);
+		}
 	}
 }
