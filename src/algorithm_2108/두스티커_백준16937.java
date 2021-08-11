@@ -40,7 +40,6 @@ public class 두스티커_백준16937 {
 			int y = sc.nextInt();
 			sticker.add(new Point(x, y));
 		}
-		
 		dfs(2,0);
 		
 		System.out.println(max);
