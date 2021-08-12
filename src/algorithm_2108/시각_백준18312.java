@@ -27,23 +27,20 @@ public class 시각_백준18312 {
 //		for (int h = 0; h < N; h++) {
 //
 //			if (h / 10 == K || h % 10 == K) {
-////				cnt++;
-//				cnt+= h*60*60;
+//				cnt++;
 //				System.out.println("h"+h);
 //				continue;
 //			} else {
 //				for (int m = 0; m < 60; m++) {
 //					if (m / 10 == K || m % 10 == K) {
-////						cnt++;
-//						cnt+= h*60*60 + m*60;
+//						cnt++;
 //						System.out.println("h"+h+"m"+m);
 //						continue;
 //					} else {
 //						for (int s = 1; s < 60; s++) {
 //							if (s / 10 == K || s % 10 == K) {
-//								cnt+= h*60*60 + m*60 + s;
 //								System.out.println("h"+h+"m"+m+"s"+s);
-////								cnt++;
+//								cnt++;
 //							}
 //						}
 //					}
