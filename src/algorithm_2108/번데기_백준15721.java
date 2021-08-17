@@ -43,7 +43,7 @@ public class 번데기_백준15721 {
 				if (degi == T && what == 1)
 					return (bbun + degi - 1) % A;
 			}
-			num++; // 회차 증가
+			num++;
 		}
 	}
 }
