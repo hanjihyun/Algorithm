@@ -13,8 +13,11 @@ public class 모음사전_Pro {
 		int answer = 0;
 
 		ans=new ArrayList<>();
-        for(int i=1; i<=5; i++)
+		
+        for(int i=1; i<=5; i++) {
             dfs(0,new String(), i);
+        }
+        
         Collections.sort(ans);
         int index=1;
         for(String tmp: ans){
