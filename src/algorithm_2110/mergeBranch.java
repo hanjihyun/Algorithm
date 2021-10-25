@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 
 
-public class nhn1_mergeBranch {
+public class mergeBranch {
 	static int N, start;
 
 	static PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
