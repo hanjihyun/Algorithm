@@ -1,4 +1,4 @@
-## Algorithm Study
+## Algorithm
 ---
 - 백준 (Baekjoon)
 - SW Expert Academy (SWEA)
