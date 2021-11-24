@@ -9,7 +9,7 @@ public class 삽입정렬 {
 			int j = i-1;
 			
 			while(j >= 0 && arr[j]>key) {
-				arr[j+1] = arr[j];
+				arr[j+1] = arr[j]; //뒤의 값을 앞으로, 우측으로 shift
 				j--;
 			}
 			arr[j+1] = key;
