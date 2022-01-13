@@ -56,7 +56,7 @@ public class 로봇청소기_백준14503 {
 			int nbr = r + dr[nd];
 			int nbc = c + dc[nd];
 
-			if (nbr > 0 && nbc > 0 && nbr < N && nbc < M) {
+			if (nbr >= 0 && nbc >= 0 && nbr < N && nbc < M) {
 				if (arr[nbr][nbc] != 1) {
 					dfs(nbr, nbc, ori);
 				}
