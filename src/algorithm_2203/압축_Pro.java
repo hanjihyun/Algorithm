@@ -7,6 +7,7 @@ public class 압축_Pro {
 	public static void main(String[] args) {
 		
 		String msg = "KAKAO";
+		
 		ArrayList<Integer> com = new ArrayList<>();
 		HashMap<String, Integer> dic = new HashMap<>();
 
