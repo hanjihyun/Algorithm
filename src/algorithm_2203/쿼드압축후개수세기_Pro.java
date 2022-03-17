@@ -11,6 +11,7 @@ public class 쿼드압축후개수세기_Pro {
 		for (int i = 0; i < arr.length; i++) {
 			System.out.println(answer[i]);
 		}
+//		return answer;
 	}
 
 	private static void quad(int length, int y, int x, int[][] arr) {
