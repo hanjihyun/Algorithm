@@ -5,8 +5,7 @@ public class k진수에서소수개수구하기_pro {
 		int n = 437674;
 		int k = 3;
 		int answer = 0;
-//		
-//		int num = 437674;
+		
 		String num = "";
 		while (n > 0) {
 			num = n % k + num;
